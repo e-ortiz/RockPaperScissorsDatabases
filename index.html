@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors with Databases</title>
+
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+
+  <div id="mainscreen">
+  </div>
+
+
+<div id = "lobbyscreen">
+  <div type="template/string" id="myTemplate" >
+
+    <div id="container">
+        <div id="gameList-container">
+          <p>Welcome to Rock, Paper, Scissors!<br><br> Choose a lobby below.</p>
+          <input id= "userName" placeholder = "Enter Username"/>
+          <h2 class="rps_h2">Game Lobby</h2>
+      <ul id = "theGames" style="list-style: none;">
+        </ul>
+        </div>
+
+        <button id="createGameBtn" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Create Game</button>
+      </div>
+
+      <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <header class="w3-container w3-teal">
+            <h3>Create Game</h3>
+      <span onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span>
+          </header>
+          <div class="w3-container">
+            <div class="input-container">
+           <label for="gameName">Game Name <span class="required-input">*</span></label>
+      <input id= "gameName" placeholder = "Enter your game's name."/>
+        </div>
+          </div>
+          <footer class="w3-container w3-teal">
+                      <button
+      id="cancelCreateBtn" onclick="document.getElementById('id01').style.display='none'"">Cancel</button>
+
+
+              <button
+      id="createGame" onclick="document.getElementById('id01').style.display='none'"">Create</button>
+
+          </footer>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
